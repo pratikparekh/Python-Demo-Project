@@ -122,7 +122,7 @@ def view_post(post_id):
 	posts = models.Post.select().where(models.Post.id == post_id)
 	if posts.count() == 0:
 		abort(404)
-	return render_template('stream.html', stream = posts)
+	return render_template('stream2.html', stream = posts)
 
 @app.route('/follow/<username>')
 @login_required
